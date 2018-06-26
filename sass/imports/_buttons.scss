@@ -1,5 +1,5 @@
 
-@mixin buttons {
+@mixin btn {
   border-radius: $button-radius;
   color: $lightblue-color;
      &:hover {
@@ -9,3 +9,4 @@
        color: $grayblue-color;
      }
 }
+
