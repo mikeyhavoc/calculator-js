@@ -1,12 +1,30 @@
-
-@mixin btn {
+//=================================================
+// Button
+//=================================================
+%button {
+  background-color: $darkblue-color;
   border-radius: $button-radius;
   color: $lightblue-color;
-     &:hover {
-       color: $lightgreen-color;
-     }
-     &:active {
-       color: $grayblue-color;
-     }
+  display: inline-block;
+  font-weight: bold;
+  padding: 0.75em 1.5em;
+  text-decoration: none;
+  transition: opacity 0.5s;
+
+  &:hover {
+    color: $white;
+    opacity: 0.8;
+  }
+  &:active {
+    opacity: initial;
+  }
+}
+
+
+
+
+.btn {
+ @extend %button;
+
 }
 

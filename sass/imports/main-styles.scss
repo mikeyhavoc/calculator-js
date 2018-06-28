@@ -1,0 +1,19 @@
+
+.calculator {
+  width: 600px;
+  background-color: lighten($grayblue-color, 25%);
+  margin: 0 auto;
+
+  border-radius: 5em;
+
+  display: flex;
+  justify-content: center;
+
+}
+
+input { height: 2.5em; }
+
+.clacInput { width: 450px; margin-top: 1.5em; direction: rtl; }
+
+
+
