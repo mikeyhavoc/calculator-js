@@ -5,7 +5,7 @@
   background-color: $darkblue-color;
   border-radius: $button-radius;
   color: $lightblue-color;
-  display: inline-block;
+  display: inline-flex;
   font-weight: bold;
   padding: 0.75em 1.5em;
   text-decoration: none;
@@ -23,7 +23,7 @@
 
 
 
-.btn {
+.btn-main {
  @extend %button;
 
 }
