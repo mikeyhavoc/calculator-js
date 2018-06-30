@@ -17,11 +17,29 @@
 <header class="header__title">
    <h1 class="title text-center m-5">JS Calculator</h1>
 </header>
-    <main class="container">
+    <main>
         <section class="calculator">
-            <div class="calcInput">
-                <button id="clrbtn" class="clear btn" data-ops="clearNums">C</button> <input id="input" type="text">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="calcInput">
+
+                            <div class="output"></div>
+                            <button id="clrbtn" class="clear btn btn-main" data-ops="clearNums
+                            ">C</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12">
+                        <button class="btn btn-main num" data-num="7">7</button>
+                        <button class="btn btn-main num" data-num="8">8</button>
+                        <button class="btn btn-main num" data-num="9">9</button>
+                    </div>
+                </div>
             </div>
+
+
 
 
 
@@ -30,7 +48,7 @@
 </div>
 
 <script src="node_modules/jquery/dist/jquery.min.js"></script>
-<script src="node_modules/popper.js/dist/popper.min.js"></script>
+<script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
 <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
 <script src="js/app.js"></script>
 </body>
