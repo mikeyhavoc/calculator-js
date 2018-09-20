@@ -6,21 +6,55 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Calculator</title>
-    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
 <main class="container my-5">
     <div class="box-restraint">
-        <div class="btn input-space full-width height"></div>
-    </div>
+        <div class="outputSpace  output-color col-12 height">
+            <input type="text">
+        </div>
 
+        <div class="row">
+            <button class="clearBtn  primary-color inline col-6 height">
+                C
+            </button>
+            <button class="backBtn  primary-color inline col-25p height">
+                <-
+            </button>
+            <button class="divideBtn  secondary-color inline col-25p height">
+                &#247;
+            </button>
+        </div>
+        <div class="row">
+            <button class="sevenBtn primary-color inline col-25p height">7</button>
+            <button class="eightBtn primary-color inline col-25p height">8</button>
+            <button class="nineBtn primary-color inline col-25p height">9</button>
+            <button class="multiplyBtn secondary-color inline col-25p height">X</button>
+        </div>
+        <div class="row">
+            <button class="fourBtn primary-color inline col-25p height">4</button>
+            <button class="fiveBtn primary-color inline col-25p height">5</button>
+            <button class="sixBtn primary-color inline col-25p height">6</button>
+            <button class="subtractBtn secondary-color inline col-25p height">-</button>
+        </div>
+
+        <div class="row">
+            <button class="oneBtn primary-color inline col-25p height">1</button>
+            <button class="twoBtn primary-color inline col-25p height">2</button>
+            <button class="threeBtn primary-color inline col-25p height">3</button>
+            <button class="plusBtn secondary-color inline col-25p height">+</button>
+        </div>
+        <div class="row">
+            <button class="zeroBtn primary-color inline col-75p height">0</button>
+            <button class="equalsBtn secondary-color inline col-25p height">=</button>
+        </div>
+    </div>
 
 </main>
 
-<script src="node_modules/jquery/dist/jquery.min.js"></script>
-<script src="node_modules/popper.js/dist/popper.min.js"></script>
-<script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+
 </body>
 </html>
