@@ -15,8 +15,8 @@ input { width: 100%; font-size: 4.5em; background: black; color: white; directio
 /** direction rtl -> right to left for text to show up like a real calculator on right side of screen. **/
 
 .container { margin-top: 3.75em; }
-.box-restraint { width: 37.500em; margin-left: auto; margin-right: auto; }
-.col-12 { width: 100%; line-height: 1.6px; }
+.box-container { width: 37.500em; margin-left: auto; margin-right: auto; }
+.col-12 { width: 100%; }
 
 
 /**
@@ -51,6 +51,7 @@ Row alignment.
 input button
  */
 .output-color {  background: black;}
+.output { line-height: 1.6px; }
 
 /*****************
 clear button
