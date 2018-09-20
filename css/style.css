@@ -14,7 +14,7 @@ button { border: 1px solid black; font-size: 2.5em; font-weight: bold;}
 input { width: 100%; font-size: 4.5em;
     background: black; color: white; direction: rtl; }
 
-
+.container { margin-top: 3.75em; }
 .box-restraint { width: 37.500em; margin-left: auto; margin-right: auto; }
 .col-12 { width: 100%; line-height: 1.6px; }
 
