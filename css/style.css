@@ -1,24 +1,67 @@
+html {
+    box-sizing: border-box;
 
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
 /**
 box restraint 37.500em
 button radius 50%
 
  */
 
-/**
+/******************
 globals
  */
+button { border: 1px solid black; font-size: 2.5em; font-weight: bold;}
+
+input { width: 100%; font-size: 4.5em;
+    background: black; color: white; direction: rtl; }
+
+
 .box-restraint { width: 37.500em; margin-left: auto; margin-right: auto; }
-.full-width { width: 100%; }
+.col-12 { width: 100%; line-height: 1.6px; }
 
 
 /**
+main colors
+ */
+.primary-color { background:#d1d3d6; }
+.secondary-color { background: coral; }
+/**
+normal button size.
+ */
+.col-25p { width: 25%; }
+
+
+
+
+
+/****************
 helpers
  */
-.height { height: 75px; }
+.height { height: 95px; }
+.inline { display: inline-block; } /** for buttons inside rows. **/
 
 
-/**
+/***************
+Row alignment.
+ */
+.row { display: flex; justify-content: space-between; }
+
+
+
+/****************
 input button
  */
-.input-space {  background: black;}
+.output-color {  background: black;}
+
+/*****************
+clear button
+ */
+.col-6 { width: 50%; }
+/****************
+zero button
+ */
+.col-75p { width: 75%; }
