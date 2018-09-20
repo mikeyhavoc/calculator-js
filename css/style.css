@@ -1,0 +1,24 @@
+
+/**
+box restraint 37.500em
+button radius 50%
+
+ */
+
+/**
+globals
+ */
+.box-restraint { width: 37.500em; margin-left: auto; margin-right: auto; }
+.full-width { width: 100%; }
+
+
+/**
+helpers
+ */
+.height { height: 75px; }
+
+
+/**
+input button
+ */
+.input-space {  background: black;}
