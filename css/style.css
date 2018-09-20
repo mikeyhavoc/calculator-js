@@ -9,10 +9,9 @@ html {
 /******************
 globals
  */
-button { border: 1px solid black; font-size: 2.5em; font-weight: bold;}
+button { border: 1px solid black; font-size: 2.5em; font-weight: bold;} /** add border around buttons **/
 
-input { width: 100%; font-size: 4.5em;
-    background: black; color: white; direction: rtl; }
+input { width: 100%; font-size: 4.5em; background: black; color: white; direction: rtl; }
 
 .container { margin-top: 3.75em; }
 .box-restraint { width: 37.500em; margin-left: auto; margin-right: auto; }
@@ -22,7 +21,7 @@ input { width: 100%; font-size: 4.5em;
 /**
 main colors
  */
-.primary-color { background:#d1d3d6; }
+.primary-color { background:#d1d3d6; } /** grey color for numbers and clear and back button **/
 .secondary-color { background: coral; }
 /**
 normal button size.
@@ -36,7 +35,7 @@ normal button size.
 /****************
 helpers
  */
-.height { height: 95px; }
+.height { height: 95px; } /* needed to give height for buttons. */
 .inline { display: inline-block; } /** for buttons inside rows. **/
 
 
