@@ -15,6 +15,11 @@ document.querySelector('.calc-buttons').addEventListener('click', function(event
    buttonClick(event.target.value);
 });
 
+/**
+ * buttonClick
+ * check whether a number or not, pass to handleSymbol function or handleNumber function.
+ * @param value
+ */
 function buttonClick(value) {
     if(isNaN(parseInt(value))) {
         handleSymbol(value);
@@ -24,6 +29,11 @@ function buttonClick(value) {
 
 }
 
+/**
+ * handleNumber
+ * checks buffer, if str(0) adds value, else concatenates value.
+ * @param value
+ */
 function handleNumber(value) {
   if (buffer === '0') {
       buffer = value;
@@ -35,7 +45,10 @@ function handleNumber(value) {
 
 function handleSymbol(value) {}
 
-
+/**
+ * rerender
+ * pushes buffer to screen.
+ */
 function rerender() {
     screen.innerText = buffer;
 }
