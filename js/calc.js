@@ -12,8 +12,27 @@ let previousOperator = null;
 const screen = document.querySelector('.screen');
 
 document.querySelector('.calc-buttons').addEventListener('click', function(event) {
+    const key = event.target;
+    const action = key.dataset.action;
  console.log(event.target.value);
-   buttonClick(event.target.innerText);
+    if (!action) {
+        buttonClick(event.target.innerText);
+    } else {
+        if (action === 'divide') {
+            divide(event.target.innerText);
+        } else if(action === 'multiply') {
+            multiply(event.target.innerText);
+        } else if(action === 'subtract') {
+            subtract(event.target.innerText);
+        } else if(action === 'add') {
+            addition(event.target.innerText);
+        } else if(action === 'calculate') {
+            calculate(event.target.innerText);
+        } else if (action === 'clear') {
+            clear(event.target.innerText);
+        }
+    }
+
 });
 
 /**
@@ -53,21 +72,25 @@ function handleNumber(value) {
  */
 function handleSymbol(value) {
 
+
     switch(value) {
         case 'C':
             buffer = '0';
             runningTotal = 0;
             break;
         case '=':
+            console.log('blank');
             if (previousOperator === null) {
                 return;
             }
+            console.log('equals');
             flushOperation(parseInt(buffer));
             previousOperator = null;
             buffer = ' ' + runningTotal;
             runningTotal = 0;
             break;
-        case '←':
+            console.log('arrow');
+        case `&larr;`:
             if (buffer.length === 1) {
                 buffer = '0';
             } else {
@@ -75,6 +98,7 @@ function handleSymbol(value) {
             }
             break;
         default:
+            console.log('default');
             handleMath(value);
             break;
     }
@@ -94,16 +118,22 @@ function handleMath(value) {
 }
 
 function flushOperation(intBuffer) {
+    const divide = `&div;`;
+    const times = `&times;`;
+    const subtract = `&minus;`;
+    const plus = `&plus;`;
 
-
-    if (previousOperator === ÷) {
-
+    if (previousOperator === '&div;') {
+        console.log('divide');
         runningTotal /= intBuffer;
-    } else if (previousOperator === ×) {
+    } else if (previousOperator === `&times;`) {
+        console.log('times');
         runningTotal *= intBuffer;
-    } else if (previousOperator === −) {
+    } else if (previousOperator === subtract) {
+        console.log('sub');
         runningTotal -= intBuffer;
     } else {
+        console.log('add');
         runningTotal += intBuffer
     }
 }
