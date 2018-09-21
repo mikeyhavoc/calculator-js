@@ -46,7 +46,11 @@ function handleNumber(value) {
     rerender();
 }
 
-
+/**
+ * handleSymbol
+ * switch statement checking math symbols that are on calculator. else goes to handleMath.
+ * @param value
+ */
 function handleSymbol(value) {
     const arrow = `&larr;`;
     switch(value) {
