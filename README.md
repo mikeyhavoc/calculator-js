@@ -2,27 +2,13 @@
 
 A Html, CSS, and JavaScript calculator project.
 
-Work **Done** and **To Do** on _Project_. 
-- [x] Plan layout 
-- [x] layout html
-- [x] work CSS into structure for design.
-- [x] Get design to look pretty much how I want.
-- [ ] come back and make it responsive.
-<hr>
+when i started this project I was trying to do it before watching a 
+Frontendmasters video. After getting frustrated with how the symbols
+were not working, not going anywhere on how they got the symbols 
+to work and I could not. I started to watch the video.
 
-- [ ] set up buttons to display numbers.
-- [ ] symbols too do said task when clicked.
-- [ ] equals button to produce a result.
-- [ ] clear button to clear screen.
-- [ ] back button to go backwards.
-- [ ] zero error does not crash program.
-- [ ] show what symbol was pressed on far left side.
-- [ ] be able to press multiple symbols(do not when i will get this done)
+The problem came about when Brian used a trick <br> _only in macs_
 
 
-## Goal List
 
-I find my list seems semi large but at the same time small.
-They are broken down into small steps, chunks that can be accomplished
-in sessions now. Far easier than looking at the large picture and
-getting overwhelmed.
+
