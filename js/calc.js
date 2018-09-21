@@ -29,7 +29,7 @@ function buttonClick(value) {
 
             handleNumber(value);
     }
-
+    rerender();
 }
 
 /**
@@ -43,7 +43,7 @@ function handleNumber(value) {
   } else {
       buffer += value;
   }
-    rerender();
+
 }
 
 /**
@@ -78,4 +78,13 @@ function handleSymbol(value) {
             handleMath(value);
             break;
     }
+}
+
+
+/**
+ * rerender
+ * pushes text to screen.
+ */
+function rerender() {
+    screen.innerText = buffer;
 }
