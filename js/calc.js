@@ -29,7 +29,9 @@ document.querySelector('.calc-buttons').addEventListener('click', function(event
         } else if(action === 'calculate') {
             calculate(event.target.innerText);
         } else if (action === 'clear') {
-            clear(event.target.innerText);
+            clearScreen(event.target.innerText);
+        } else if (action === 'back') {
+
         }
     }
 
@@ -104,18 +106,17 @@ function handleSymbol(value) {
     }
 }
 
-function handleMath(value) {
-    const intBuffer = parseInt(buffer);
-    if (runningTotal === 0) {
-        runningTotal = intBuffer;
-    } else {
-        flushOperation(intBuffer);
-    }
-
-    previousOperator = value;
-
+/**
+ * clear
+ * clear out numbers in calculator.
+ * @param value
+ */
+function clearScreen(value) {
     buffer = '0';
+    runningTotal = 0;
+    rerender();
 }
+
 
 function flushOperation(intBuffer) {
     const divide = `&div;`;
