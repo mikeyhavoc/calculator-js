@@ -52,7 +52,7 @@ function handleNumber(value) {
  * @param value
  */
 function handleSymbol(value) {
-    const arrow = `&larr;`;
+
     switch(value) {
         case 'C':
             buffer = '0';
@@ -67,7 +67,7 @@ function handleSymbol(value) {
             buffer = ' ' + runningTotal;
             runningTotal = 0;
             break;
-        case arrow:
+        case '←':
             if (buffer.length === 1) {
                 buffer = '0';
             } else {
@@ -77,6 +77,34 @@ function handleSymbol(value) {
         default:
             handleMath(value);
             break;
+    }
+}
+
+function handleMath(value) {
+    const intBuffer = parseInt(buffer);
+    if (runningTotal === 0) {
+        runningTotal = intBuffer;
+    } else {
+        flushOperation(intBuffer);
+    }
+
+    previousOperator = value;
+
+    buffer = '0';
+}
+
+function flushOperation(intBuffer) {
+
+
+    if (previousOperator === ÷) {
+
+        runningTotal /= intBuffer;
+    } else if (previousOperator === ×) {
+        runningTotal *= intBuffer;
+    } else if (previousOperator === −) {
+        runningTotal -= intBuffer;
+    } else {
+        runningTotal += intBuffer
     }
 }
 
