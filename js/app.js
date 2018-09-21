@@ -6,31 +6,29 @@
  * License: MIT, You may use this code in full or in part With written acknowledgement
  * Inside the code or in the README.md referencing Michael Williams.
  */
-
-// bubble event sent from buttons up to box-container where i will bubble delegate.
-const boxContainer = document.querySelector('.box-container');
-
-/**
- *
- * @type {buttons}
- */
-function showButton(event) {
-    const seven = document.querySelector('.sevenBtn');
-    const display = document.querySelector('.displayOutput');
-
-    display.innerText = seven;
-
-};
 const box = document.querySelector('.box-container');
 
+function addBtn(event) {
+    const btn = '.addBtn';
+    const addButton = document.querySelector('.addBtn');
+    let display = document.querySelector('.outputSpace')
+    if (addButton.classList.contains(btn)) {
+        display += display;
+        console.log(display);
+
+
+    }
+    event.preventDefault();
+}
 
 
 box.addEventListener('click', function(event) {
     const display = document.querySelector('.displayOutput');
+    if(event.target.tagName === 'BUTTON') {
+        display.innerText = event.target.innerText;
 
+    }
 
-    display.innerText = event.target.innerText;
-    console.log(event.target);
 
 
 });
