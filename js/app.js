@@ -21,14 +21,17 @@ function showButton(event) {
     display.innerText = seven;
 
 };
+const box = document.querySelector('.box-container');
 
-boxContainer.addEventListener('click', showButton, false);
 
-const seven = document.querySelector('.sevenBtn');
-seven.addEventListener('click', function(event) {
+
+box.addEventListener('click', function(event) {
     const display = document.querySelector('.displayOutput');
 
-    let s = event.target;
 
-    display.innerText = s;
+    display.innerText = event.target.innerText;
+    console.log(event.target);
+
+
 });
+
