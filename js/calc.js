@@ -31,7 +31,7 @@ document.querySelector('.calc-buttons').addEventListener('click', function(event
         } else if (action === 'clear') {
             clearScreen(event.target.innerText);
         } else if (action === 'back') {
-
+            goBackOneNumber(event.target.innerText);
         }
     }
 
@@ -114,6 +114,22 @@ function handleSymbol(value) {
 function clearScreen(value) {
     buffer = '0';
     runningTotal = 0;
+    rerender();
+}
+
+/**
+ * goBackOneNumber
+ * if one number turn it into 0
+ * else take the first number and delete it.
+ * @param value
+ */
+function goBackOneNumber(value) {
+    if (buffer.length === 1) {
+        buffer = '0';
+    } else {
+
+        buffer = buffer.substring(0, buffer.length - 1);
+    }
     rerender();
 }
 
