@@ -11,7 +11,7 @@ globals
  */
 button { border: 1px solid black; font-size: 2.5em; font-weight: bold;} /** add border around buttons **/
 
-input { width: 100%; font-size: 4.5em; background: black; color: white; direction: rtl; }
+.output { width: 100%; font-size: 4.5em; background: black; color: white; direction: rtl; }
 /** direction rtl -> right to left for text to show up like a real calculator on right side of screen. **/
 
 .container { margin-top: 3.75em; }
@@ -51,7 +51,7 @@ Row alignment.
 input button
  */
 .output-color {  background: black;}
-.output { line-height: 1.6px; }
+
 
 /*****************
 clear button
